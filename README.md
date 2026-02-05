@@ -5,19 +5,17 @@ The repository demonstrates database design, data import, and SQL queries to ext
 
 ## Repository Contents
 
-- **hospitals.sql**  
-  Full MySQL database dump including table structures and imported data.
+- **hospitals.sql**
+  FULL MySQL database dump including table structures and imported data.
 
 - **queries.sql**  
   A collection of SQL queries that answer the assessment tasks.  
   Each query is commented to explain what it does and why it is used.
-  Where appropriate, alternative approaches are shown (e.g. using `WHERE` only vs `INNER JOIN`).
+  Where appropriate, alternative approaches are shown (e.g. using 'WHERE' only and 'INNER JOIN').
 
 - **diagrams**  
-  - **ERD_Database_hospitals.png** – Entity Relationship Diagram showing tables and relationships  
-  - **Flowchart_database_hospitals.png** – Flowchart illustrating the database design and data loading process
+  - **Flowchart database hospitals.png** – Flowchart illustrating the database design and data loading process
+  - **ERD Database hospitals.png** – Entity Relationship Diagram showing tables and relationships
 
-- **README.md**  
-  Project overview and description of the repository contents.
 
 
