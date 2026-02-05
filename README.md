@@ -16,6 +16,12 @@ The repository demonstrates database design, data import, and SQL queries to ext
 - **diagrams**  
   - **Flowchart database hospitals.png** – Flowchart illustrating the database design and data loading process
   - **ERD Database hospitals.png** – Entity Relationship Diagram showing tables and relationships
+ 
+## Diagrams
+
+### Entity Relationship Diagram (ERD)
+<!-- <img src="diagrams/ERD_Database_hospitals.png" width="700">
+
 
 
 
