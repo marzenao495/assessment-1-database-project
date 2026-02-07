@@ -22,7 +22,7 @@ The repository demonstrates database design, data import, and SQL queries to ext
 ## Data Import and Primary Key Handling
 
 The CSV files (`hospitals.csv`, `doctors.csv`, `patients.csv`, `prescriptions.csv`) were imported into tables created without AUTO_INCREMENT on the *primary keys*. This ensured that the original ID values from the CSV files were preserved.
-In particular, the `patients.csv` uses patient IDs starting from 100, while the other CSV files use IDs staring from 1. All IDs were therefore imported exactly as provided.
+In particular, the `patients.csv` uses patient IDs starting from 101, while the other CSV files use IDs staring from 1. All IDs were therefore imported exactly as provided.
 
 After the data import was completed, the *primary key* fields were modified to use `AUTO_INCREMENT` to supoort future insert without manually specifying *primary key* values. This was done using the following statement for each table:
 
