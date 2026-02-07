@@ -25,7 +25,7 @@ The repository demonstrates database design, data import, and SQL queries to ext
 The ERD shows all tables in the **hospital database** and their relationshps (`hospital-doctor`, `doctor-patient`, `patient-prescription`, `doctor-prescription`).
 
 ### Entity Relationship Diagram (ERD)
-<img src="diagrams/ERD_Database_hospitals.png" width="700">
+<img src="diagrams/2_ERD_Database_hospitals.png" width="700">
 
 ## Data Import and Primary Key Handling
 
