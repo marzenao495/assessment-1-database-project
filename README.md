@@ -4,6 +4,7 @@
 This project contains a MySQL database for a hospital system, including tables for hospitals, doctors, patients, and prescriptions.  
 The repository demonstrates database design, data import, and SQL queries to extract and analyse the data.
 
+
 ## Repository Contents
 
 ### **hospitals.sql**
@@ -19,6 +20,13 @@ The repository demonstrates database design, data import, and SQL queries to ext
   Each query is commented to explain what it does and why it is used.
   Where appropriate, alternative approaches are shown (e.g. using 'WHERE' only and 'INNER JOIN').
 
+  
+## Diagrams
+The ERD shows all tables in the **hospital database** and their relationshps (`hospital-doctor`, `doctor-patient`, `patient-prescription`, `doctor-prescription`, etc.).
+
+### Entity Relationship Diagram (ERD)
+<img src="diagrams/ERD_Database_hospitals.png" width="700">
+
 ## Data Import and Primary Key Handling
 
 The CSV files (`hospitals.csv`, `doctors.csv`, `patients.csv`, `prescriptions.csv`) were imported into tables created without AUTO_INCREMENT on the *primary keys*. This ensured that the original ID values from the CSV files were preserved.
@@ -32,13 +40,6 @@ MODIFY entity_id INT unsigned NOT NULL AUTO_INCREMENT;
 ```
 
 This approach allows new records (e.g. new patients) to be added safely and helps prevent primary key conflicts in future inserts.
-
-  
-## Diagrams
-The ERD shows all tables in the **hospital database** and their relationshps (`hospital-doctor`, `doctor-patient`, `patient-prescription`, `doctor-prescription`, etc.).
-
-### Entity Relationship Diagram (ERD)
-<img src="diagrams/ERD_Database_hospitals.png" width="700">
 
 
 ## Usuage
