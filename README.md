@@ -22,7 +22,7 @@ The repository demonstrates database design, data import, and SQL queries to ext
 
   
 ## Diagrams
-The ERD shows all tables in the **hospital database** and their relationshps (`hospital-doctor`, `doctor-patient`, `patient-prescription`, `doctor-prescription`, etc.).
+The ERD shows all tables in the **hospital database** and their relationshps (`hospital-doctor`, `doctor-patient`, `patient-prescription`, `doctor-prescription`).
 
 ### Entity Relationship Diagram (ERD)
 <img src="diagrams/ERD_Database_hospitals.png" width="700">
