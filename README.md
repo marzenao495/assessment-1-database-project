@@ -6,15 +6,15 @@ The repository demonstrates database design, data import, and SQL queries to ext
 
 ## Repository Contents
 
-- **hospitals.sql**
+### **hospitals.sql**
   - MySQL database dump including table structures and imported data.
   Import this file into MySQL to recreate the complete hospital database used in ths project.
 
-- **diagrams**  
+### **diagrams**  
   - **Flowchart database hospitals.png** – Flowchart illustrating the database design and data loading process
   - **ERD Database hospitals.png** – Entity Relationship Diagram showing tables and relationships
  
-- **queries.sql**  
+### **queries.sql**  
   - A collection of SQL queries that answer the assessment tasks.  
   Each query is commented to explain what it does and why it is used.
   Where appropriate, alternative approaches are shown (e.g. using 'WHERE' only and 'INNER JOIN').
@@ -41,5 +41,10 @@ The ERD shows all tables in the **hospital database** and their relationshps (`h
 <img src="diagrams/ERD_Database_hospitals.png" width="700">
 
 
+## Usuage
+
+1. Import the `hospitals.sql`file into a MySQL database.
+2. Open the file `queries.sql`, which contains all SQL gueries required for the assessment.
+3. Run the queries individually. Each query is commented to explain which assessment task it addresses and what it demonstrates.
 
 
