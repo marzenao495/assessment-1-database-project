@@ -5,8 +5,7 @@
 
 ### **Project Overview**
 
-​​This repository contains a MySQL-based hospital database developed as part of an academic assessment.
-The project demonstrates database planning, implementation, data import from CSV files, and SQL querying using relational database principles.
+​​This repository contains a MySQL-based hospital database developed as part of an academic assessment. The CSV files used in this project were provided as part of the course. The project includes database planning, implementation, data import from CSV files, and SQL querying using relational database principles.
 
 
 
@@ -26,14 +25,15 @@ Each patient is assigned to exactly one doctor, and prescriptions are linked to 
  
 - **queries.sql**  
 
-  A collection of SQL queries that address the assessment tasks. Each query is commented to explain its purpose. Where appropriate, alternative query approaches are demonstrated (e.g. using `WHERE` clauses versus `INNER JOIN`).
-
+  A collection of SQL queries that address the assessment tasks. Each query is commented to explain its purpose. Where appropriate, alternative query approaches are included (e.g. using `WHERE` clauses versus `INNER JOIN`).
   
+
 ### Diagrams
 
 - **Flowchart database hospitals.png**
 
   Flowchart illustrating the database design process and data loading workflow.
+  
 - **ERD Database hospitals.png**
 
   Entity Relationship Diagram showing all tables and their relationships.
@@ -42,10 +42,21 @@ Each patient is assigned to exactly one doctor, and prescriptions are linked to 
 
 ## Database Planning and Design
 
+### Database Development Process
+First, a flowchart was created to outline the overall planning process.
+The provided CSV files were inspected, and the existing ID fields were adopted as primary keys; corresponding reference fields were used to define the foreign key relationships between tables.
+Finally, the tables were implemented in MySQL, the data was imported, and the required SQL queries were executed.
+
+
 ### Flowchart
-The flowchart illustrates the overall planning process of the database, including database design, relationship verification, table creation, data loading from CSV files, and handling of new data entries.
+The flowchart illustrates the overall planning process of the database, including database design, table creation, data loading from CSV files, and handling of new data entries.
+
 
 ### Entity Relationship Diagram (ERD)
+
+The ERD reflects the structure derived from the provided CSV data.
+Each entity is defined with a primary key corresponding to the existing ID fields in the data.
+Foreign key relationships represent the references between entities (e.g. doctors assigned to hospitals and prescriptions linked to patients), ensuring referential integrity in the relational schema.
 
 The ERD illustrates all tables in the hospital database and their relationships:
 - `Hospital` – `Doctor` (One-to-Many)
@@ -54,7 +65,8 @@ The ERD illustrates all tables in the hospital database and their relationships:
 - `Patient` – `Prescription` (One-to-Many)
 
 
-This diagram was used to plan the database structure and ensure correct implementation of relationships using foreign keys.
+This diagram was used to plan the database structure and ensure correct implementation of relationships using foreign keys. 
+
 
 <img src="diagrams/2_ERD_Database_hospitals.png" width="700">
 
@@ -82,5 +94,7 @@ To load and explore the database:
 1. Import the `hospitals.sql` file into a MySQL database.
 2. Open the file `queries.sql`, which contains the SQL queries required for the assessment.
 3. Execute the queries individually. Each query is commented to explain its purpose.
+
+
 
 
