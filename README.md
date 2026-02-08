@@ -91,7 +91,7 @@ This approach allows new records (e.g. new patients) to be added safely and help
 ## Usage
 
 To load and explore the database:
-1. Import the `hospitals.sql` file into a MySQL database.
+1. Import the `hospitals.sql` file into a MySQL database (e.g. via terminal: `mysql -u root < hospitals.sql`).
 2. Open the file `queries.sql`, which contains the SQL queries required for the assessment.
 3. Execute the queries individually. Each query is commented to explain its purpose.
 
