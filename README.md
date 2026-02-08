@@ -1,40 +1,71 @@
-# About The Project
-**Assessment 1 - Database Project**
-
-This project contains a MySQL database for a hospital system, including tables for hospitals, doctors, patients, and prescriptions.  
-The repository demonstrates database design, data import, and SQL queries to extract and analyse the data.
+# Hospital Database Project
 
 
-## Repository Contents
+## About The Project
 
-### **hospitals.sql**
-- MySQL database dump containing the complete database schema and imported data.
-- Importing this file into MySQL recreates the hospital database used in this project.
+### **Project Overview**
+
+​​This repository contains a MySQL-based hospital database developed as part of an academic assessment.
+The project demonstrates database planning, implementation, data import from CSV files, and SQL querying using relational database principles.
 
 
-### **diagrams**  
-- **Flowchart database hospitals.png** – Flowchart illustrating the database design and data loading process.
-- **ERD Database hospitals.png** – Entity Relationship Diagram showing tables and relationships.
 
+## Database Description
+The database stores information about hospitals, doctors, patients, and prescriptions.
+Relationships between tables are implemented using primary and foreign keys to ensure data integrity.
+Each patient is assigned to exactly one doctor, and prescriptions are linked to both patients and doctors.
+
+
+## Repository Structure
+
+### SQL Files
+
+- **hospitals.sql**
+
+  MySQL database dump containing the complete database schema and imported data. Importing this file recreates the hospital database used in this project.
  
-### **queries.sql**  
-- A collection of SQL queries that answer the assessment tasks.
-- Each query is commented to explain what it does.
-- Where appropriate, alternative query approaches are shown (e.g. using `WHERE` only versus `INNER JOIN`).
+- **queries.sql**  
+
+  A collection of SQL queries that address the assessment tasks. Each query is commented to explain its purpose. Where appropriate, alternative query approaches are demonstrated (e.g. using `WHERE` clauses versus `INNER JOIN`).
 
   
-## Diagrams
-The ERD shows all tables in the **hospital database** and their relationshps (`hospital-doctor`, `doctor-patient`, `patient-prescription`, `doctor-prescription`).
+### Diagrams
+
+- **Flowchart database hospitals.png**
+
+  Flowchart illustrating the database design process and data loading workflow.
+- **ERD Database hospitals.png**
+
+  Entity Relationship Diagram showing all tables and their relationships.
+
+
+
+## Database Planning and Design
+
+### Flowchart
+The flowchart illustrates the overall planning process of the database, including database design, relationship verification, table creation, data loading from CSV files, and handling of new data entries.
 
 ### Entity Relationship Diagram (ERD)
+
+The ERD illustrates all tables in the hospital database and their relationships:
+- `Hospital` – `Doctor` (One-to-Many)
+- `Doctor` – `Patient` (One-to-Many)
+- `Doctor` – `Prescription` (One-to-Many)
+- `Patient` – `Prescription` (One-to-Many)
+
+
+This diagram was used to plan the database structure and ensure correct implementation of relationships using foreign keys.
+
 <img src="diagrams/2_ERD_Database_hospitals.png" width="700">
+
+
 
 ## Data Import and Primary Key Handling
 
-The CSV files (`hospitals.csv`, `doctors.csv`, `patients.csv`, `prescriptions.csv`) were imported into tables created without AUTO_INCREMENT on the *primary keys*. This ensured that the original ID values from the CSV files were preserved.
-In particular, the `patients.csv` uses patient IDs starting from 101, while the other CSV files use IDs staring from 1. All IDs were therefore imported exactly as provided.
+The database was populated using CSV files provided as part of the assessment. The files (`hospitals.csv`, `doctors.csv`, `patients.csv`, `prescriptions.csv`) were imported into tables created without `AUTO_INCREMENT` on the primary keys. 
+This ensured that the original ID values contained in the CSV files were preserved. In particular, `patients.csv` uses patient IDs starting from 101, while the other CSV files use IDs starting from 1. All IDs were therefore imported exactly as provided.
 
-After the data import was completed, the *primary key* fields were modified to use `AUTO_INCREMENT` to supoort future insert without manually specifying *primary key* values. This was done using the following statement for each table:
+After the data import, the primary key columns were modified to use `AUTO_INCREMENT` to support future inserts without manually specifying primary key values. The following SQL statement illustrates how the primary key columns were updated after data import.
 
 ```sql
 ALTER TABLE table
@@ -44,13 +75,12 @@ MODIFY entity_id INT unsigned NOT NULL AUTO_INCREMENT;
 This approach allows new records (e.g. new patients) to be added safely and helps prevent primary key conflicts in future inserts.
 
 
+
 ## Usage
 
-1. Import the `hospitals.sql`file into a MySQL database.
-2. Open the file `queries.sql`, which contains all SQL gueries required for the assessment.
-3. Run the queries individually. Each query is commented to explain which assessment task it addresses and what it demonstrates.
+To load and explore the database:
+1. Import the `hospitals.sql` file into a MySQL database.
+2. Open the file `queries.sql`, which contains the SQL queries required for the assessment.
+3. Execute the queries individually. Each query is commented to explain its purpose.
 
 
-## Context
-
-This project was developed as part of a master's-level database coursework.
