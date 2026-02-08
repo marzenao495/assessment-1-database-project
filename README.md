@@ -1,5 +1,6 @@
 # Hospital Database Project
 
+[GitHub Repository](https://github.com/marzenao495/assessment-1-database-project.git)
 
 ## About The Project
 
